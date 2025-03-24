@@ -1,0 +1,24 @@
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:cuda
+    container_name: open_webui
+    restart: always
+    ports:
+      - "3000:8080"                                             # Mapea el puerto 3000 del host al puerto 8080 del contenedor
+    environment:
+      - WEBUI_GPU=true                                          # Habilita la GPU si está disponible
+      - OLLAMA_API_BASE_URL=http://host.docker.internal:11434
+    runtime: nvidia  # Usar GPU con el runtime NVIDIA
+    volumes:
+      - open-webui:/app/backend/data                            # Persistencia de datos usando un volumen
+    extra_hosts:
+      - "host.docker.internal:host-gateway"                     # Permite que el contenedor acceda a la máquina anfitriona
+    networks:
+      - openwebui_network
+
+networks:
+  openwebui_network:
+    driver: bridge
+
+volumes:
+  open-webui:

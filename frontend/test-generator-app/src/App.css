@@ -1,0 +1,15 @@
+.main-container{
+  margin-top: 64px;
+  display: flex;  
+}
+
+.app{
+  min-width: 100dvw;
+  min-height: 100dvh;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

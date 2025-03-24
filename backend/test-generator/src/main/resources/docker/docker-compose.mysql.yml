@@ -1,0 +1,17 @@
+services:
+  mysql:
+    image: mysql:8.0                          # Imagen oficial de MySQL versión 8.0
+    container_name: mysql_test_generator_db   # Nombre del contenedor
+    restart: always                           # El contenedor se reiniciará automáticamente si falla
+    environment:                              # Variables de entorno para configurar MySQL
+      MYSQL_ROOT_PASSWORD: root               # Contraseña del usuario root
+      MYSQL_DATABASE: test_generator          # Nombre de la base de datos por defecto
+      MYSQL_USER: user                        # Nombre del usuario que crearemos
+      MYSQL_PASSWORD: user                    # Contraseña del usuario
+    ports:
+      - "3306:3306"                           # Mapea el puerto 3306 del contenedor al 3306 del host
+    volumes:
+      - mysql_data:/var/lib/mysql             # Almacena los datos en un volumen persistente
+
+volumes: # Definimos un volumen para persistencia de datos
+  mysql_data:
