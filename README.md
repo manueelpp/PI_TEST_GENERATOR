@@ -1,7 +1,7 @@
 
 # Test Generator Application
 
-Esta es una aplicación desarrollada con **Spring Boot** para el backend, **Vue.js** para el frontend y conectada a través de Docker a **OpenWebUI**, **MySQL**, y **Ollama** para interactuar con el modelo de lenguaje **Llama 3.1**. Este archivo `.README` proporciona información sobre cómo instalar y configurar todo el entorno necesario para ejecutar la aplicación.
+Esta es una aplicación desarrollada con **Spring Boot** para el backend, **Vite** para el frontend y conectada a través de Docker a **OpenWebUI**, **MySQL**, y **Ollama** para interactuar con el modelo de lenguaje **Llama 3.1**. Este archivo `.README` proporciona información sobre cómo instalar y configurar todo el entorno necesario para ejecutar la aplicación.
 
 ## Requisitos previos
 
@@ -23,8 +23,7 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas:
 Clona este repositorio en tu máquina local:
 
 ```
-git clone <URL_DEL_REPOSITORIO>
-cd <CARPETA_DEL_REPOSITORIO>
+git clone https://github.com/manueelpp/PI_TEST_GENERATOR.git
 ```
 
 ### Paso 2: Configuración de Ollama
@@ -155,7 +154,7 @@ npm run dev
 ## Descripción de las tecnologías utilizadas
 
 - **Spring Boot**: Framework para el desarrollo del backend.
-- **Vue.js** + **React**: Frameworks de frontend.
+- **Vite** + **React**: Frameworks de frontend.
 - **OpenWebUI**: Interfaz web para interactuar con tu modelo de lenguaje.
 - **Ollama**: Software para ejecutar modelos Llama 3.1 localmente.
 - **MySQL**: Base de datos para persistencia de datos.
