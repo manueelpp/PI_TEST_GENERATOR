@@ -22,6 +22,6 @@ public class DeleteTopicController {
 
         deleteTopicService.deleteById(id);
 
-        return ResponseEntity.ok(TOPIC_ENTITY + WITH_ID + "id" + WAS_DELETED_SUCCESSFULLY);
+        return ResponseEntity.ok(TOPIC_ENTITY + WITH_ID + id + WAS_DELETED_SUCCESSFULLY);
     }
 }

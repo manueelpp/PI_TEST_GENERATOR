@@ -23,6 +23,6 @@ public class DeleteQuestionController {
 
         deleteQuestionService.deleteById(id);
 
-        return ResponseEntity.ok(QUESTION_ENTITY + WITH_ID + "id" + WAS_DELETED_SUCCESSFULLY);
+        return ResponseEntity.ok(QUESTION_ENTITY + WITH_ID + id + WAS_DELETED_SUCCESSFULLY);
     }
 }

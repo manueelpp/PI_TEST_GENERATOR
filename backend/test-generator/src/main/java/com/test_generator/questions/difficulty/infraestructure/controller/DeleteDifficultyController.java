@@ -22,6 +22,6 @@ public class DeleteDifficultyController {
 
         deleteDifficultyService.deleteById(id);
 
-        return ResponseEntity.ok(DIFFICULTY_ENTITY + WITH_ID + "id" + WAS_DELETED_SUCCESSFULLY);
+        return ResponseEntity.ok(DIFFICULTY_ENTITY + WITH_ID + id + WAS_DELETED_SUCCESSFULLY);
     }
 }
